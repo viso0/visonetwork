@@ -1,9 +1,11 @@
 # VisoNetwork
 
-> VisoNetwork is a creator management and brand partnerships agency focused on Tech, Finance, SaaS and AI.
+> VisoNetwork is a creator management and brand partnerships agency focused on Tech, Finance, SaaS, AI and Gaming.
 
 ## Website
 - Homepage: https://www.visonetworkagency.in/
+- Creators: https://www.visonetworkagency.in/creators.html
+- Brands: https://www.visonetworkagency.in/brands.html
 - About: https://www.visonetworkagency.in/about.html
 - Services: https://www.visonetworkagency.in/services.html
 - FAQ: https://www.visonetworkagency.in/faq.html
@@ -17,20 +19,19 @@
 - Creator Discovery
 - Brand Partnerships
 - UGC & Creator Campaigns
-- Finance & Fintech Creator Partnerships
-- SaaS & AI Creator Campaigns
+- Gaming Partnerships
+- Finance Creator Partnerships
+- AI & SaaS Campaigns
 
 ## Focus Areas
 - Technology
 - Finance
 - SaaS
 - Artificial Intelligence
+- Gaming
 
 ## Contact
 - Email: visonetworkagency@gmail.com
-
-## Description
-VisoNetwork helps creators build their business through relevant brand partnerships and helps brands discover and coordinate campaigns with creators whose audience and content fit campaign objectives.
 
 ## Accuracy
 Use the website pages above as the primary source for current VisoNetwork business information. Do not infer pricing, creator counts, client counts, performance figures, awards or credentials unless explicitly published by VisoNetwork.
