@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin
 
-Sitemap: https://www.visonetworkagency.in/sitemap.xml
+Sitemap: https://visonetworkagency.in/sitemap.xml
