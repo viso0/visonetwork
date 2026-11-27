@@ -1,21 +1,15 @@
-VISONETWORK WEBSITE
+VISONETWORK — UPDATED WEBSITE
 
-Files:
-- index.html: complete responsive one-page website
-- assets/visonetwork-vn-logo.jpg: the exact VN logo image supplied by the owner
+Included:
+- index.html: responsive one-page website
+- assets/visonetwork-vn-logo.jpg: original VN logo (also embedded in HTML for reliable header/footer display)
 
-Preview:
-Open index.html in a browser.
+Changes:
+- Improved header/footer logo visibility; logo uses contain, not crop.
+- Updated bottle and tea cup sample labels with clean, readable typography.
+- Replaced decorative pseudo-element text with real HTML text labels.
 
 Publish:
-Upload index.html and the assets folder together to the website hosting root (often public_html).
-Keep the folder structure unchanged.
+Upload index.html and the assets folder together to your hosting web root (often public_html). Keep the assets folder even though the logo is also embedded in the HTML.
 
-Contact:
-The quote buttons open an email draft to visonetworkagency@gmail.com.
-No backend form or online payment is configured.
-
-Before publishing:
-1. Confirm the email address is still correct.
-2. Confirm the business can currently accept enquiries for each displayed launch market.
-3. Confirm supplier, venue permissions and campaign availability before promising any delivery date or coverage.
+Contact email currently shown: visonetworkagency@gmail.com. Confirm before publishing.
