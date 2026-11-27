@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07152f">
+  <meta name="description" content="VisoNetwork specializes in Water Bottle Advertising and Tea Cup Advertising. Your Brand. Everywhere.">
+  <title>VisoNetwork | Water Bottle & Tea Cup Advertising</title>
+  <style>
+    :root{--navy:#07152f;--navy2:#0b2046;--blue:#0877f9;--sky:#53b8ff;--ink:#10213d;--muted:#64748b;--paper:#f5f8fc;--white:#fff;--line:#e4ebf4;--radius:24px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{background:#041027;color:#dce9ff;font-size:13px;padding:8px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(226,234,245,.85)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:850;font-size:22px;letter-spacing:-.8px}.brand img{width:48px;height:48px;object-fit:cover;border-radius:10px;background:#000}.brand span span{color:var(--blue)}
+    .links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:650;color:#34445d}.links a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:13px 21px;font-weight:750;background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(8,119,249,.2);transition:.2s}
+    .btn:hover{transform:translateY(-2px);background:#0066df}.btn.light{background:#fff;color:var(--navy);box-shadow:none}.btn.outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);box-shadow:none}
+    .menu{display:none;background:#edf4ff;border:0;border-radius:12px;padding:10px;color:var(--navy)}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 20%,#164b91 0,transparent 34%),linear-gradient(120deg,#06132b 0%,#0a1e42 58%,#06132b 100%);color:#fff;padding:82px 0 72px}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(65,161,255,.2);border-radius:50%;width:580px;height:580px;right:-190px;top:-260px}.hero:after{width:420px;height:420px;right:-100px;top:-180px}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:#a9d5ff;background:rgba(22,126,255,.13);border:1px solid rgba(83,184,255,.28);padding:8px 13px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+    h1{font-size:clamp(40px,5.3vw,68px);line-height:1.04;letter-spacing:-2.8px;margin:22px 0 20px}.gradient{background:linear-gradient(90deg,#fff,#75c7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:18px;color:#c5d5ed;max-width:590px;margin:0 0 28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.micro{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px;color:#b9cbe5;font-size:13px}.micro span:before{content:"✓";color:#55b5ff;font-weight:900;margin-right:7px}
+    .showcase{position:relative;min-height:390px;display:flex;align-items:center;justify-content:center}
+    .glow{position:absolute;width:330px;height:330px;border-radius:50%;background:#0877f9;filter:blur(85px);opacity:.26}
+    .product-card{position:relative;width:min(100%,480px);height:360px;border:1px solid rgba(255,255,255,.18);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.035));backdrop-filter:blur(12px);box-shadow:0 30px 80px rgba(0,0,0,.25);overflow:hidden}
+    .product-card:before{content:"";position:absolute;inset:auto -20px -90px;height:210px;background:linear-gradient(90deg,#0877f9,#55bdff);transform:skewY(-12deg);opacity:.8}
+    .bottle{position:absolute;left:15%;top:48px;width:105px;height:250px;border-radius:28px 28px 23px 23px;background:linear-gradient(90deg,rgba(188,230,255,.5),rgba(255,255,255,.95) 30%,rgba(160,220,255,.55));border:2px solid rgba(255,255,255,.7);box-shadow:inset -12px 0 18px rgba(0,93,190,.15),0 18px 28px rgba(0,0,0,.25);transform:rotate(-8deg)}
+    .bottle:before{content:"";position:absolute;top:-24px;left:27px;width:48px;height:30px;border-radius:8px 8px 4px 4px;background:repeating-linear-gradient(90deg,#0877f9 0 4px,#0864d2 4px 7px)}
+    .bottle:after{content:"VISONETWORK\\A YOUR BRAND. EVERYWHERE.";white-space:pre;position:absolute;left:-4px;right:-4px;top:96px;text-align:center;background:#fff;color:#0a2b5d;padding:14px 2px;font-size:9px;line-height:1.8;font-weight:900;letter-spacing:.3px;box-shadow:0 5px 12px #001b3c22}
+    .cup{position:absolute;right:13%;top:116px;width:150px;height:155px;border-radius:8px 8px 35px 35px;background:linear-gradient(90deg,#e8eef6,#fff 30%,#dce6f1);clip-path:polygon(0 0,100% 0,88% 100%,12% 100%);box-shadow:0 18px 30px rgba(0,0,0,.22)}
+    .cup:before{content:"";position:absolute;left:0;right:0;top:0;height:18px;border-radius:50%;background:#c9d6e5;border:4px solid #fff}
+    .cup:after{content:"VN\\A VISONETWORK";white-space:pre;position:absolute;top:56px;left:0;right:0;text-align:center;color:#0b2854;font-weight:900;font-size:14px;line-height:1.8}
+    .steam{position:absolute;right:24%;top:55px;color:#d7eaff;font-size:35px;letter-spacing:8px;opacity:.8}
+    .float-tag{position:absolute;bottom:20px;left:24px;z-index:2;padding:12px 16px;border-radius:14px;background:#fff;color:#0b2046;font-weight:800;font-size:13px;box-shadow:0 12px 30px #00102b55}
+    section{padding:86px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 42px}.kicker{color:var(--blue);font-size:12px;letter-spacing:1.8px;text-transform:uppercase;font-weight:850}.section-head h2{font-size:clamp(30px,4vw,44px);letter-spacing:-1.4px;line-height:1.12;margin:12px 0}.section-head p{color:var(--muted);margin:0;font-size:16px}
+    .services{display:grid;grid-template-columns:1fr 1fr;gap:22px}.service{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#fff;box-shadow:0 14px 45px rgba(16,43,83,.055);transition:.2s}.service:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(16,43,83,.1)}
+    .service-icon{width:54px;height:54px;border-radius:16px;background:#eaf4ff;color:var(--blue);display:grid;place-items:center;font-size:26px}.service h3{font-size:23px;margin:20px 0 8px}.service p{color:var(--muted);margin:0 0 18px}.ticks{list-style:none;padding:0;margin:0;display:grid;gap:9px;color:#33445f;font-size:14px}.ticks li:before{content:"✓";color:var(--blue);font-weight:900;margin-right:9px}
+    .band{background:var(--paper)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px}.num{font-size:13px;font-weight:900;color:var(--blue);background:#eaf4ff;border-radius:10px;padding:7px 10px;display:inline-block}.step h3{font-size:17px;margin:15px 0 7px}.step p{font-size:14px;color:var(--muted);margin:0}
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}.why-panel{background:linear-gradient(145deg,#07152f,#103a78);border-radius:28px;padding:34px;color:#fff;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.why-panel:after{content:"VN";font-size:170px;font-weight:950;color:rgba(255,255,255,.055);position:absolute;right:8px;bottom:-48px}.why-panel h3{font-size:28px;line-height:1.15;max-width:330px;margin:0;position:relative;z-index:1}.why-panel p{color:#c3d7f2;max-width:350px;position:relative;z-index:1}.why-list{display:grid;gap:18px}.why-item{display:flex;gap:15px}.why-item b{display:block;margin-bottom:3px}.why-item p{margin:0;color:var(--muted);font-size:14px}.check{flex:0 0 34px;width:34px;height:34px;border-radius:11px;background:#eaf4ff;color:var(--blue);display:grid;place-items:center;font-weight:900}
+    .locations{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}.loc{background:#fff;border:1px solid var(--line);border-radius:15px;padding:14px 20px;font-weight:750;color:#213653}
+    .cta{background:linear-gradient(115deg,#07152f,#0d3b7b);color:#fff;border-radius:28px;padding:46px;display:flex;justify-content:space-between;align-items:center;gap:25px}.cta h2{font-size:clamp(27px,3.5vw,40px);line-height:1.1;margin:0 0 10px;letter-spacing:-1px}.cta p{color:#c4d5ed;margin:0}
+    footer{background:#040d20;color:#dce8f8;padding:48px 0 22px}.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}.foot-brand{display:flex;gap:12px;align-items:center;font-size:21px;font-weight:850}.foot-brand img{width:44px;height:44px;border-radius:9px;object-fit:cover}.foot-copy{color:#9fb1cc;font-size:14px;max-width:340px}.foot-title{font-size:13px;color:#fff;font-weight:850;margin-bottom:13px}.foot-links{display:grid;gap:9px;color:#aebed4;font-size:14px}.foot-links a:hover{color:#fff}.copyright{border-top:1px solid #1b2a43;margin-top:35px;padding-top:18px;color:#8193ad;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:850px){.links{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;padding:18px 24px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:16px}.links.open{display:flex}.menu{display:block}.nav>.btn{display:none}.hero{padding:60px 0}.hero-grid{grid-template-columns:1fr;gap:28px}.showcase{min-height:350px}.product-card{height:330px}.steps{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}.foot-grid{grid-template-columns:1fr 1fr}.foot-grid>div:first-child{grid-column:1/-1}}
+    @media(max-width:560px){.wrap{width:min(100% - 30px,1160px)}.topbar .wrap{justify-content:center;text-align:center}.nav{height:68px}.brand{font-size:19px}.brand img{width:42px;height:42px}.links{top:68px}.hero{padding:48px 0}.hero h1{letter-spacing:-1.8px}.hero p{font-size:16px}.showcase{min-height:290px}.product-card{height:280px}.bottle{transform:scale(.82) rotate(-8deg);transform-origin:top left;left:12%;top:45px}.cup{transform:scale(.82);transform-origin:top right;right:8%;top:105px}.steam{right:20%;top:52px}.float-tag{font-size:11px;left:12px;bottom:13px}.services{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.step{padding:17px}.step h3{font-size:15px}.step p{font-size:13px}section{padding:65px 0}.service{padding:24px}.cta{padding:30px 24px}.foot-grid{grid-template-columns:1fr}.foot-grid>div:first-child{grid-column:auto}.copyright{justify-content:center;text-align:center}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>Offline advertising, made memorable.</span><span>Sahibganj, Jharkhand&nbsp; · &nbsp;Patna, Bihar</span></div></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="VisoNetwork home"><img src="assets/visonetwork-vn-logo.jpg" alt="VisoNetwork VN logo"><span>Viso<span>Network</span></span></a>
+      <nav class="links" id="navLinks"><a href="#home">Home</a><a href="#services">Our Services</a><a href="#process">How It Works</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <a class="btn" href="mailto:visonetworkagency@gmail.com?subject=VisoNetwork%20Campaign%20Enquiry">Get a Quote ↗</a>
+      <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Your Brand. Everywhere.</div>
+          <h1>Make everyday moments work for <span class="gradient">your brand.</span></h1>
+          <p>Take your message beyond the screen with creative Water Bottle Advertising and Tea Cup Advertising, coordinated for your campaign and audience.</p>
+          <div class="hero-actions"><a class="btn" href="mailto:visonetworkagency@gmail.com?subject=Get%20a%20Campaign%20Quote">Plan Your Campaign ↗</a><a class="btn outline" href="#services">Explore Services</a></div>
+          <div class="micro"><span>Two focused advertising formats</span><span>Campaign-led planning</span><span>Local-first approach</span></div>
+        </div>
+        <div class="showcase" aria-label="Water bottle and tea cup advertising mockups">
+          <div class="glow"></div><div class="product-card"><div class="steam">〰 〰</div><div class="bottle"></div><div class="cup"></div><div class="float-tag">BOTTLE + CUP BRANDING</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">What we do</div><h2>Two simple formats. <span style="color:#0877f9">Memorable visibility.</span></h2><p>VisoNetwork focuses on two offline advertising services designed to put brand messages on everyday-use products.</p></div>
+        <div class="services">
+          <article class="service"><div class="service-icon">💧</div><h3>Water Bottle Advertising</h3><p>Bring your campaign artwork to water bottle labels through coordinated printing and distribution planning with suitable partners.</p><ul class="ticks"><li>Campaign artwork coordination</li><li>Label and print coordination</li><li>Distribution planning with approved partners</li></ul></article>
+          <article class="service"><div class="service-icon">☕</div><h3>Tea Cup Advertising</h3><p>Give your brand a place in everyday tea moments with custom advertising on suitable tea cups.</p><ul class="ticks"><li>Custom cup design coordination</li><li>Food-contact material coordination</li><li>Distribution planning at approved locations</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="process">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Our process</div><h2>From campaign idea to distribution.</h2><p>A clear, coordinated process helps keep your campaign organized from the first discussion.</p></div>
+        <div class="steps">
+          <div class="step"><span class="num">01</span><h3>Tell us your goal</h3><p>Share your brand, audience, preferred format and campaign location.</p></div>
+          <div class="step"><span class="num">02</span><h3>Plan the campaign</h3><p>We discuss quantity, artwork, suitable partners, permissions and timelines.</p></div>
+          <div class="step"><span class="num">03</span><h3>Coordinate production</h3><p>Printing and production are coordinated after specifications and approvals are confirmed.</p></div>
+          <div class="step"><span class="num">04</span><h3>Coordinate distribution</h3><p>Distribution is planned through authorized partners at approved locations.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap why-grid">
+        <div class="why-panel"><div class="eyebrow">About VisoNetwork</div><h3>Offline advertising with a clear, focused approach.</h3><p>We help businesses explore practical brand-promotion campaigns through water bottle and tea cup advertising.</p></div>
+        <div class="why-list">
+          <div class="why-item"><div class="check">✓</div><div><b>Focused services</b><p>We keep our offering centered on Water Bottle Advertising and Tea Cup Advertising.</p></div></div>
+          <div class="why-item"><div class="check">✓</div><div><b>Coordinated execution</b><p>Artwork, production and distribution planning are aligned around the campaign brief.</p></div></div>
+          <div class="why-item"><div class="check">✓</div><div><b>Permission-led distribution</b><p>Campaign activity is planned for approved venues and authorized distribution partners.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Our launch markets</div><h2>Starting local. Building connections.</h2><p>VisoNetwork's initial market focus is Sahibganj and Patna. Campaign availability, venues and timelines are confirmed individually.</p></div>
+        <div class="locations"><div class="loc">📍 Sahibganj, Jharkhand</div><div class="loc">📍 Patna, Bihar</div></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="cta"><div><h2>Have a campaign in mind?</h2><p>Tell us what you want to promote. Let's discuss a suitable bottle or tea cup advertising campaign.</p></div><a class="btn light" href="mailto:visonetworkagency@gmail.com?subject=VisoNetwork%20Campaign%20Enquiry&body=Hello%20VisoNetwork%2C%0A%0AI%20am%20interested%20in%20a%20campaign.%0A%0ABrand%20name%3A%0AAdvertising%20format%3A%0ACampaign%20location%3A%0AApproximate%20quantity%3A%0APreferred%20timeline%3A%0A%0AThank%20you.">Email Us for a Quote ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div><div class="foot-brand"><img src="assets/visonetwork-vn-logo.jpg" alt="VN logo"><span>VisoNetwork</span></div><p class="foot-copy">Your Brand. Everywhere. Focused offline advertising through Water Bottle Advertising and Tea Cup Advertising.</p></div>
+        <div><div class="foot-title">EXPLORE</div><div class="foot-links"><a href="#services">Our Services</a><a href="#process">How It Works</a><a href="#about">About VisoNetwork</a></div></div>
+        <div><div class="foot-title">GET IN TOUCH</div><div class="foot-links"><a href="mailto:visonetworkagency@gmail.com">visonetworkagency@gmail.com</a><span>Sahibganj, Jharkhand</span><span>Patna, Bihar</span></div></div>
+      </div>
+      <div class="copyright"><span>© <span id="year"></span> VisoNetwork. All rights reserved.</span><span>Your Brand. Everywhere.</span></div>
+    </div>
+  </footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰'});
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
